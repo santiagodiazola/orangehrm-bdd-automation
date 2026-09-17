@@ -4,6 +4,8 @@
 
 An end-to-end automated testing framework built for the **OrangeHRM** application using industry-standard BDD and automation tools.
 
+![OrangeHRM Test Execution Success](./evidence/orangehrm-execution.png)
+
 ## 🚀 Tech Stack
 * **Language:** Java
 * **Automation Tool:** Selenium WebDriver
