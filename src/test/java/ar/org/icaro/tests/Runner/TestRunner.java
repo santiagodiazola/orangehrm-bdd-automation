@@ -1,4 +1,4 @@
-package ar.org.icaro;
+package ar.org.icaro.tests.Runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 @Test
 @CucumberOptions(
         features = {
-                "src/main/resources/flujo_completo.feature",
-                "src/main/resources/negative_testing.feature"
+                "src/test/resources/features/flujo_completo.feature",
+                "src/test/resources/features/negative_testing.feature"
         },
         glue = "ar.org.icaro",
         plugin = {

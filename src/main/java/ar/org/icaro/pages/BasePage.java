@@ -1,6 +1,7 @@
 package ar.org.icaro.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,7 +43,7 @@ public class BasePage {
     public boolean isElementVisible(By locator) {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             return false;
         }
     }

@@ -1,7 +1,8 @@
-package ar.org.icaro;
+package ar.org.icaro.tests.steps;
 import ar.org.icaro.pages.LoginPage;
 import ar.org.icaro.pages.DashboardPage;
 import ar.org.icaro.pages.PIMPage;
+import ar.org.icaro.tests.Runner.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
