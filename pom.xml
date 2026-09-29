@@ -12,7 +12,10 @@
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <aspectj.version>1.9.22</aspectj.version>
+        <allure.version>2.29.0</allure.version>
     </properties>
+
     <dependencies>
 
         <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -21,6 +24,13 @@
             <artifactId>selenium-java</artifactId>
             <version>4.40.0</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!-- Allure Cucumber 7 Integration -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>${allure.version}</version>
         </dependency>
 
         <!-- Source: https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -54,8 +64,6 @@
             <version>7.8.0</version>
             <scope>test</scope>
         </dependency>
-
-
 
     </dependencies>
 

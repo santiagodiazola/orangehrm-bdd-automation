@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
 @Test
+
 @CucumberOptions(
         features = {
                 "src/test/resources/features/flujo_completo.feature",
@@ -14,6 +15,7 @@ import org.testng.annotations.Test;
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "json:target/cucumber.json"
         },
         monochrome = true
