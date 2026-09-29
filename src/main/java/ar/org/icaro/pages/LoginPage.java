@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage extends BasePage {
 
     // Locators:
-    private By usernameField = By.xpath("//input[@placeholder='Username']");
-    private By passwordField = By.xpath("//input[@placeholder='Password']");
-    private By loginButton = By.xpath("//button[@type='submit']");
-    private By errorMessage = By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
+    private By usernameField = By.name("username");
+    private By passwordField = By.name("password");
+    private By loginButton = By.cssSelector("button[type='submit']");
+    private By errorMessage = By.cssSelector("p.oxd-alert-content-text");
 
     // Constructor:
     public LoginPage(WebDriver driver) {
