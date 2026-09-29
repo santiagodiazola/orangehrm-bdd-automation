@@ -1,4 +1,8 @@
+
+
 #  **OrangeHRM BDD Automation Framework**
+![Java CI with Maven](https://github.com/santiagodiazola/orangehrm-bdd-automation/actions/workflows/maven.yml/badge.svg)
+
 
 **Project Goal:** To build a behavior-driven test automation framework validating authentication, user administration, and security workflows on the OrangeHRM platform.
 
