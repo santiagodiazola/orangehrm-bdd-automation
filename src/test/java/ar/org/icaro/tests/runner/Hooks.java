@@ -1,4 +1,4 @@
-package ar.org.icaro.tests.Runner;
+package ar.org.icaro.tests.runner;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

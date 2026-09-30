@@ -3,7 +3,7 @@ package ar.org.icaro.tests.steps;
 import ar.org.icaro.pages.DashboardPage;
 import ar.org.icaro.pages.LoginPage;
 import ar.org.icaro.pages.PIMPage;
-import ar.org.icaro.tests.Runner.Hooks;
+import ar.org.icaro.tests.runner.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
