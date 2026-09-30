@@ -91,9 +91,12 @@ OrangeHRM
 
 ---
 
-## CI/CD
+## CI/CD & Live Reporting
 
-The automated test suite can be executed through **GitHub Actions**, providing repeatable validation through a CI workflow.
+The automated test suite is executed through GitHub Actions, providing repeatable validation through a CI workflow. Every successful build on the main branch automatically deploys the latest Cucumber HTML test execution report to GitHub Pages.
+
+🚀 View Live Test Report: [OrangeHRM BDD Test Results](https://santiagodiazola.github.io/orangehrm-bdd-automation/)
+
 
 ### Pipeline
 
@@ -108,6 +111,7 @@ Test Execution
       ↓
 Reports & Evidence
 ```
+
 ## Project Structure
 
 ```text
@@ -169,6 +173,8 @@ The current implementation demonstrates:
 * Test reporting and execution evidence
 * Future Improvements
 
+## Future Improvements
+
 Potential extensions to the framework include:
 
 * Expanding functional coverage across additional OrangeHRM modules
@@ -183,5 +189,3 @@ Potential extensions to the framework include:
 ## Author
 
 Santiago Diaz Ola
-
-QA Engineer transitioning from a background in Psychology, with a focus on software quality, test automation, API testing, and risk-based testing.
