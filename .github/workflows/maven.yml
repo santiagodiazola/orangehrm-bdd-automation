@@ -47,10 +47,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Prepare Pages Directory
+        run: |
+          mkdir -p public
+          # Automatically finds your cucumber html report and sets it as the landing page
+          cp target/cucumber-reports.html public/index.html || cp target/site/cucumber-reporting/cucumber-html-reports/overview-features.html public/index.html || echo "Report not found"
+
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'target/'
+          path: 'public/'
 
   deploy:
     needs: build
