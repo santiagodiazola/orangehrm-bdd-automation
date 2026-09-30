@@ -1,8 +1,5 @@
-
-
-#  **OrangeHRM BDD Automation Framework**
 ![Java CI with Maven](https://github.com/santiagodiazola/orangehrm-bdd-automation/actions/workflows/maven.yml/badge.svg)
-
+#  **OrangeHRM BDD Automation Framework**
 
 **Project Goal:** To build a behavior-driven test automation framework validating authentication, user administration, and security workflows on the OrangeHRM platform.
 
@@ -10,7 +7,7 @@
 
 ---
 
-## 📊 **Executive Summary**
+## **Executive Summary**
 This repository houses a comprehensive end-to-end test automation suite built using **Java, Selenium WebDriver, Cucumber (BDD), and TestNG**. The framework implements the **Page Object Model (POM)** design pattern to ensure clean separation of concerns, high code reusability, and long-term maintainability.
 
 ### **Key Execution Metrics**
@@ -20,7 +17,7 @@ This repository houses a comprehensive end-to-end test automation suite built us
 
 ---
 
-## 🏗️ **Architectural Framework & Design Patterns**
+## **Architectural Framework & Design Patterns**
 
 * **Behavior-Driven Development (BDD):** 
 Gherkin syntax bridges the gap between technical automation and functional business requirements.
