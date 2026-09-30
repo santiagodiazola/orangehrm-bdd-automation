@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,18 +18,17 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: maven
+          cache: 'maven'
 
       - name: Run Tests with Maven
         run: mvn clean test
-          
-          # --- SAVE REPORTS & EVIDENCE ---
-               - name: Upload Test Reports and Evidence
-               uses: actions/upload-artifact@v4
-               if: always() # Ensures reports are uploaded even if tests fail
-               with:
-                 name: test-reports-and-evidence
-                 path: |
-                   target/
-                   evidence/
-                 retention-days: 30
+
+      - name: Upload Test Reports and Evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-reports-and-evidence
+          path: |
+            target/
+            evidence/
+          retention-days: 30
