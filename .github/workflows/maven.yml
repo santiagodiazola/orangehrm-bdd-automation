@@ -23,3 +23,14 @@ jobs:
 
       - name: Run Tests with Maven
         run: mvn clean test
+          
+          # --- SAVE REPORTS & EVIDENCE ---
+               - name: Upload Test Reports and Evidence
+               uses: actions/upload-artifact@v4
+               if: always() # Ensures reports are uploaded even if tests fail
+               with:
+                 name: test-reports-and-evidence
+                 path: |
+                   target/
+                   evidence/
+                 retention-days: 30
