@@ -19,12 +19,16 @@ public class Hooks {
         // Automatically setup ChromeDriver using WebDriverManager
         WebDriverManager.chromedriver().setup();
 
-        // Configure Chrome Options for local and CI/CD execution
+        // Configure Chrome Options
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
 
         // Check if running in GitHub Actions or any CI environment
         String ciEnv = System.getenv("CI");
-        if (ciEnv != null && ciEnv.equals("true")) {
+        boolean isCI = ciEnv != null && ciEnv.equalsIgnoreCase("true");
+
+        if (isCI) {
+            // Options strictly required for Linux / CI/CD containers (headless)
             options.addArguments("--headless=new");
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
@@ -34,9 +38,13 @@ public class Hooks {
 
         driver = new ChromeDriver(options);
 
-        // Maximize window only if running locally with a graphical interface
-        if (ciEnv == null) {
-            driver.manage().window().maximize();
+        // Maximize window only when running locally (with graphical interface)
+        if (!isCI) {
+            try {
+                driver.manage().window().maximize();
+            } catch (Exception e) {
+                // Fallback
+            }
         }
     }
 
