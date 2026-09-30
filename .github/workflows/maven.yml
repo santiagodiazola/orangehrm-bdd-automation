@@ -15,7 +15,7 @@ permissions:
 # Allow only one concurrent deployment
 concurrency:
   group: "pages"
-  cancel-in-running: false
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -44,21 +44,14 @@ jobs:
             evidence/
           retention-days: 30
 
-      # --- NEW STEPS FOR GITHUB PAGES DEPLOYMENT ---
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Point this to your generated Cucumber HTML report folder or target directory
           path: 'target/'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  # Required job block for GitHub Pages deployment permissions
   deploy:
     needs: build
     runs-on: ubuntu-latest
