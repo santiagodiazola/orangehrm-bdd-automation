@@ -2,6 +2,9 @@
 
 ![Java CI with Maven](https://github.com/santiagodiazola/orangehrm-bdd-automation/actions/workflows/maven.yml/badge.svg)
 
+Live Test Report: [OrangeHRM BDD Test Results](https://santiagodiazola.github.io/orangehrm-bdd-automation/)
+
+
 An end-to-end UI test automation framework for validating authentication, user administration, and negative/security-related workflows in OrangeHRM. It combines **Java, Selenium WebDriver, Cucumber BDD, TestNG, Maven, and the Page Object Model (POM)**, with automated execution through **GitHub Actions**.
 
 ![OrangeHRM Test Execution Success](./evidence/orangehrm-execution.png)
@@ -94,9 +97,6 @@ OrangeHRM
 ## CI/CD & Live Reporting
 
 The automated test suite is executed through GitHub Actions, providing repeatable validation through a CI workflow. Every successful build on the main branch automatically deploys the latest Cucumber HTML test execution report to GitHub Pages.
-
-🚀 View Live Test Report: [OrangeHRM BDD Test Results](https://santiagodiazola.github.io/orangehrm-bdd-automation/)
-
 
 ### Pipeline
 
